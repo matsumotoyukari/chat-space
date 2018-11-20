@@ -8,8 +8,8 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups
-- has_many :users
+- belongs_to :group
+- belongs_to :user
 
 
 
@@ -17,11 +17,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|member_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups
+- has_many :groups, through: :members
 - has_many :members
 - has_many :messages
 
@@ -31,12 +30,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|member_id|integer|null: false, foreign_key: true|
+|id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups
-- has_many :users
+- has_many :members
+- has_many :users, through: :members
 - has_many :messages
 
 
