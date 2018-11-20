@@ -18,7 +18,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|name|string|null: false|
+|name|string|null: false,index: true|
 
 ### Association
 - has_many :groups, through: :members
@@ -46,8 +46,8 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text|null: false|
-|image|text|null: false|
+|body|text|
+|image|text|
 
 
 ### Association
