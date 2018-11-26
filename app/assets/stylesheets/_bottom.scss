@@ -1,0 +1,58 @@
+    .bottom-content{
+      background-color: #DDDDDD;
+      height: 95px;
+      width: 100%;
+      // padding-left: 40px;
+      // padding: 20px 0px 0px 0px;
+      // // position: fixed;
+      // padding-left: 40px;
+
+      /* position: absolute;
+      bottom: 0;
+      right: 0;*/
+      // display: block;
+      // bottom: 0;
+      // right: 0;
+      .left-bottom{
+        background-color: white;
+        padding-left: 40px;
+        // margin-top: 20px;
+        // height: 50px;
+        // width: 700px;
+        // float: left;
+      }
+        .moji{
+          border: none;
+          height: 50px;
+          width: 900px;
+          float: left;
+          margin-top: 20px;
+          padding-left: 10px;
+          float: left;
+        }
+        .icon3{
+          background-color: white;
+          height: 35px;
+          width: 30px;
+          float: left;
+          margin-right: 15px;
+          margin-top: 20px;
+          padding-top: 15px;
+        }
+
+      .right-bottom{
+        height: 90px;
+        width: 100px;
+        float: right;
+        margin-right: 40px;
+        margin-top: 20px;
+        .form__submit{
+          background-color: #38AEF0;
+          height: 50px;
+          width: 100px;
+          border: none;
+          font-size: 16px;
+          color: white;
+        }
+      }
+    }

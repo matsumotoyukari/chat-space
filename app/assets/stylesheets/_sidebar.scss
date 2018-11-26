@@ -1,0 +1,76 @@
+html, body{
+    margin: 0;         /* 余白の削除 */
+    padding: 0;        /* 余白の削除 */
+    width:100%;
+    height:100%;
+}
+
+
+.contents {
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+  // position: fixed;
+  .left-content{
+    background-color: #2f3e51;
+    height: 100%;
+    width: 300px;
+    float: left;
+    // position: fixed;
+    // padding: 0 20px;
+    // .box1{
+    //   background-color: white;
+    //   height: 100%;
+    //   width: 20px;
+    // }
+    .header{
+      background-color: #253151;
+      height: 100px;
+      width: 300px;
+      color: #FFFFFF;
+      .people{
+        font-size: 16;
+        font-weight: bold;
+        padding-top: 35px;
+        padding-left: 20px;
+        float: left;
+        // text-align: ;
+        // vertical-align: middle;
+      }
+      .icon1{
+        float: right;
+        padding-top: 35px;
+        padding-right: 20px;
+      }
+      .icon2{
+        float: right;
+        padding-top: 35px;
+        padding-right: 5px;
+      }
+    }
+    .groups{
+      // background-color: black;
+      // height: 30px;
+      // width: 300px;
+      color: white;
+      .group{
+        background-color: #2f3e51;
+        height: 76px;
+        width: 260px;
+        margin: 20px 0 0 20px;
+       // padding: 20 0 0 0;
+        .group__name{
+          background-color: #2f3e51;
+          height: 21px;
+          font-size: 15px;
+          margin: 0 0 5px 0;
+        }
+        .group__massege{
+          background-color: #2f3e51;
+          height: 20px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
