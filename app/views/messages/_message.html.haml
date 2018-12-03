@@ -1,0 +1,9 @@
+.message
+  .sent-name
+    = message.user.name
+  .sent-day
+    = message.created_at
+  - if message.content.present?
+    .sent-naiyo
+      = message.content
+  = image_tag message.image.url if message.image.present?

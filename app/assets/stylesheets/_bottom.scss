@@ -1,6 +1,6 @@
     .bottom-content{
       background-color: #DDDDDD;
-      height: 95px;
+      height: 100px;
       width: 100%;
       // padding-left: 40px;
       // padding: 20px 0px 0px 0px;
@@ -16,6 +16,7 @@
       .left-bottom{
         background-color: white;
         padding-left: 40px;
+        width: calc( 100% - 155px );
         // margin-top: 20px;
         // height: 50px;
         // width: 700px;
@@ -38,13 +39,16 @@
           margin-right: 15px;
           margin-top: 20px;
           padding-top: 15px;
+          .hidden{
+            display: none;
+          }
         }
 
       .right-bottom{
         height: 90px;
         width: 100px;
         float: right;
-        margin-right: 40px;
+        margin-right: -80px;
         margin-top: 20px;
         .form__submit{
           background-color: #38AEF0;

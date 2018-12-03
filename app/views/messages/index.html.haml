@@ -1,61 +1,33 @@
 .contents
-  .left-content
-    / <div class="box1"></div>
-    .header
-      %h3.people matsumoto yukari
-      .icon1
-        %i.fa.fa-cog.icon
-      .icon2
-        %i.fa.fa-pencil-square-o.icon
-    .groups
-      .group
-        .group__name
-          aeaaaaaaa
-        .group__massege
-          まだメッセージはありません
-      .group
-        .group__name
-          sampleグループ
-        .group__massege
-          まだメッセージはありません
+  =render 'shared/side_bar'
+
+
+
   .right-content
     / 大枠
     .header-content
       .left-header
-        .group__name
+        .group__namecccccc
           sampleグループ
         .group__member
           Member : ryosukemaehira
       .right-header
         .right-header__button Edit
+
     .chat
       .space
-      .masseges
-        .sent-name
-          ryosukemaehira
-        .sent-day
-          2016/10/02 06:27:07
-        .sent-naiyo
-          なるほど
-      .masseges
-        .sent-name
-          ryosukemaehira
-        .sent-day
-          2016/10/02 06:27:14
-        .sent-naiyo
-          command Enterで送信したい感ある
-      .masseges
-        .sent-name
-          ryosukemaehira
-        .sent-day
-          2016/10/02 06:27:30
-        .sent-naiyo
-          お腹すいた
+      = render @messages
+
+
+
+
     .bottom-content
       .left-bottom
-        %form.new-message
-          %input.moji{:name => "new-message", :placeholder => "type a message", :type => "text"}/
-          .icon3
-            %i.fa.fa-picture-o.icon
-      .right-bottom
-        %input.form__submit{"data-disable-with" => "Send", :disabled => "disabled", :name => "commit", :type => "submit", :value => "Send"}/
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'moji', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'icon3' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          .right-bottom
+            = f.submit 'Send', class: 'form__submit'
