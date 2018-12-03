@@ -1,16 +1,20 @@
 @import "./reset";
-
 @import "./sidebar";
-
 @import "./chat";
-
 @import "./bottom";
-
 @import "./header";
-
 /*
  *= require font-awesome
  */
-
 @import "font-awesome";
 
+
+@import "modules/user";
+
+
+// colors.scssとflash.scssをインポート
+@import "config/colors";
+@import "modules/flash";
+
+
+@import "modules/group";
