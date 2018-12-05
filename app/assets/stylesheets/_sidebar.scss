@@ -7,7 +7,7 @@ html, body{
 
 
 .contents {
-  background-color: gray;
+  // background-color: gray;
   height: 100%;
   width: 100%;
   // position: fixed;
@@ -16,6 +16,7 @@ html, body{
     height: 100%;
     width: 300px;
     float: left;
+    color: #FFF;
     // position: fixed;
     // padding: 0 20px;
     // .box1{
@@ -27,7 +28,7 @@ html, body{
       background-color: #253151;
       height: 100px;
       width: 300px;
-      color: #FFFFFF;
+      // color: #FFF;
       .people{
         font-size: 16;
         font-weight: bold;
@@ -41,18 +42,24 @@ html, body{
         float: right;
         padding-top: 35px;
         padding-right: 20px;
+        .icon{
+          color: #FFF;
+        }
       }
       .icon2{
         float: right;
         padding-top: 35px;
         padding-right: 5px;
+        .icon{
+          color: #FFF;
+        }
       }
     }
     .groups{
       // background-color: black;
       // height: 30px;
       // width: 300px;
-      color: white;
+      // color: white;
       .group{
         background-color: #2f3e51;
         height: 76px;
@@ -64,11 +71,13 @@ html, body{
           height: 21px;
           font-size: 15px;
           margin: 0 0 5px 0;
+          color: #FFF;
         }
-        .group__massege{
+        .group__message{
           background-color: #2f3e51;
           height: 20px;
           font-size: 11px;
+          color: #FFF;
         }
       }
     }

@@ -7,7 +7,7 @@
     / 大枠
     .header-content
       .left-header
-        .group__namecccccc
+        .group__name
           sampleグループ
         .group__member
           Member : ryosukemaehira
@@ -15,8 +15,9 @@
         .right-header__button Edit
 
     .chat
-      .space
-      = render @messages
+      .test
+        .space
+        = render @messages
 
 
 
@@ -24,10 +25,11 @@
     .bottom-content
       .left-bottom
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'moji', placeholder: 'type a message'
+          = f.text_field :content, class: 'textbox', placeholder: 'type a message'
           .form__mask
             = f.label :image, class: 'icon3' do
               = fa_icon 'picture-o', class: 'icon'
               = f.file_field :image, class: 'hidden'
           .right-bottom
             = f.submit 'Send', class: 'form__submit'
+
