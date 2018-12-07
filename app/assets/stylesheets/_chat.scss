@@ -4,18 +4,16 @@
       height: calc(100% - 200px);
       overflow: scroll;
       .space{
-        height: 46px;
+        height: 6px;
         width: 100%;
         background-color: #FAFAFA;
       }
       .message{
-        height: 90px;
-        width: 100%;
         background-color: #FAFAFA;
-        // padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 0px;
         .sent-name{
         height: 22px;
-        // width: 100%;
         background-color: #FAFAFA;
         font-size: 16px;
         font-weight: bold;
@@ -26,29 +24,24 @@
         }
         .sent-day{
           height: 22px;
-          // width: 100%;
           background-color: #FAFAFA;
           font-size: 12px;
           color: #999999;
-          // float: right;
           margin-left: 10px;
           margin-bottom: 10px;
           float: left;
         }
         .sent-naiyo{
-          height: 16px;
-          // width: 100%;
           background-color: #FAFAFA;
           font-size: 14px;
           color: #434A54;
-          // float: inline-end;
-          // clear: none;
-          // clear: left;
           clear: right;
-          // clear: none;
           padding-top: 32px;
-          padding-bottom: 40px;
           padding-left: 40px;
+        }
+        .sent-image{
+          padding-left: 40px;
+          clear: right;
         }
       }
     }

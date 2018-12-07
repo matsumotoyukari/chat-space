@@ -1,27 +1,20 @@
 .contents
   =render 'shared/side_bar'
-
-
-
   .right-content
-    / 大枠
     .header-content
       .left-header
         .group__name
-          sampleグループ
+          = @group.name
         .group__member
-          Member : ryosukemaehira
+          Member :
+          - @group.users.each do |user|
+            = user.name
       .right-header
         .right-header__button Edit
-
     .chat
       .test
         .space
         = render @messages
-
-
-
-
     .bottom-content
       .left-bottom
         = form_for [@group, @message] do |f|
