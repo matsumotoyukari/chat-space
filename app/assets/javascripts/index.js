@@ -19,17 +19,13 @@ function buildHTML(user) {
     })
 
    .done(function(users) {
-    // console.log(users);
-    // var html = appendProduct(data);
     $('#user-search-field').empty();
     if (users.length !== 0) {
-      // 文字の長さ0じゃなかったら
      users.forEach(function(user){
       // each文
        html = buildHTML(user);
        $("#user-search-result").append(html);
      });
-     console.log(html)
     }else {
       var noUserHtml = `<div class="chat-group-user clearfix">no results</div>`
       $("#user-search-result").append(noUserHtml);
@@ -39,7 +35,7 @@ function buildHTML(user) {
       alert('error');
     })
   });
-    //追加
+
   function addHTML(id,name) {
     var html = `<div id='chat-group-users'>
                 <div class='chat-group-user clearfix' id='chat-group-user-${id}'>
@@ -54,17 +50,13 @@ function buildHTML(user) {
   $(document).on('click', '.chat-group-user__btn--add', function() {
     var id = $(this).data('userId');
     var name = $(this).data('userName');
-    console.log(name)
     var insertHTML = addHTML(id, name);
     $('#chat-group-users').append(insertHTML);
     $(this).parent('.chat-group-user').remove();
   });
-    //メンバー削除
+
   $('#chat-group-users').on('click', '.user-search-remove', function() {
     var id = $(this).data('userId');
     $(`#chat-group-user-${id}`).remove();
   })
 });
-
-// 1.ユーザーを登録できるように。
-// ２。追加したユーザを削除できるように
