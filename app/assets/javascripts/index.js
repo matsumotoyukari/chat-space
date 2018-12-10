@@ -7,9 +7,20 @@ function buildHTML(user) {
     return html;
   }
 
+  function addHTML(id,name) {
+    var html = `<div id='chat-group-users'>
+                <div class='chat-group-user clearfix' id='chat-group-user-${id}'>
+                <input name='chat_group[user_ids][]' type='hidden' value='${id}'>
+                <p class='chat-group-user__name'>${name}</p>
+                <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove" data-user-id="${id}">削除</a>
+                </div>
+                </div>`
+    return html;
+  }
+
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
-
+    $("#user-search-result").children().remove();
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -35,17 +46,6 @@ function buildHTML(user) {
       alert('error');
     })
   });
-
-  function addHTML(id,name) {
-    var html = `<div id='chat-group-users'>
-                <div class='chat-group-user clearfix' id='chat-group-user-${id}'>
-                <input name='chat_group[user_ids][]' type='hidden' value='${id}'>
-                <p class='chat-group-user__name'>${name}</p>
-                <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove" data-user-id="${id}">削除</a>
-                </div>
-                </div>`
-    return html;
-  }
 
   $(document).on('click', '.chat-group-user__btn--add', function() {
     var id = $(this).data('userId');
