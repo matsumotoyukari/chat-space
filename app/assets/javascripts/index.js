@@ -1,3 +1,4 @@
+
 $(function() {
 function buildHTML(user) {
    var html = `<div class="chat-group-user clearfix">
@@ -36,11 +37,22 @@ function buildHTML(user) {
     })
   });
 
+  function makeHTML(id,name) {
+    var html = `<div id='chat-group-users'>
+                <div class='chat-group-user clearfix' id='chat-group-user-${id}'>
+                <input name='chat_group[user_ids][]' type='hidden' value='${id}'>
+                <p class='chat-group-user__name'>${name}</p>
+                <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove" data-user-id="${id}">削除</a>
+                </div>
+                </div>`
+    return html;
+  }
+
   $(document).on('click', '.chat-group-user__btn--add', function() {
     var id = $(this).data('userId');
     var name = $(this).data('userName');
-    var insertHTML = addHTML(id, name);
-    $('#chat-group-users').append(insertHTML);
+    var newHTML = makeHTML(id, name);
+    $('#chat-group-users').append(newHTML);
     $(this).parent('.chat-group-user').remove();
   });
 
