@@ -10,8 +10,8 @@ $(document).on('turbolinks:load', function() {
                 </div>
                   <div class="sent-naiyo">
                   ${ message.content }
+                  ${ MessageImage }
                   </div>
-                ${ MessageImage }
                 </div>`;
     return html;
   }

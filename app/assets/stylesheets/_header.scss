@@ -52,10 +52,15 @@
           border-style: solid;
           border-width: thin;
           font-size: 16px;
-          color: #38AEF0;
+          // color: #38AEF0;
           display: flex;
           align-items: center;
           justify-content: center;
+          .header__button{
+            // border: none;
+            color: #38AEF0;
+            text-decoration: none;
+          }
         }
       }
     }
