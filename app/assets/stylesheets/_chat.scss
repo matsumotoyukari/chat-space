@@ -13,14 +13,15 @@
         padding-top: 40px;
         padding-bottom: 0px;
         .sent-name{
-        height: 22px;
-        background-color: #FAFAFA;
-        font-size: 16px;
-        font-weight: bold;
-        color: #434A54;
-        margin-bottom: 10px;
-        padding-left: 40px;
-        float: left;
+          height: 22px;
+          background-color: #FAFAFA;
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+          margin-bottom: 10px;
+          padding-left: 40px;
+          display: inline-block;
+          // float: left;
         }
         .sent-day{
           height: 22px;
@@ -29,19 +30,21 @@
           color: #999999;
           margin-left: 10px;
           margin-bottom: 10px;
-          float: left;
+          display: inline-block;
+          // float: left;
         }
         .sent-naiyo{
           background-color: #FAFAFA;
           font-size: 14px;
           color: #434A54;
           clear: right;
-          padding-top: 32px;
+          // padding-top: 32px;
           padding-left: 40px;
         }
         .sent-image{
-          padding-left: 40px;
-          clear: right;
+          margin-left: 36px;
+          display: block;
+          // clear: both;
         }
       }
     }
