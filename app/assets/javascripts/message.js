@@ -9,7 +9,7 @@ $(document).on('turbolinks:load', function() {
                 ${ message.time }
                 </div>
                   <div class="sent-naiyo">
-                  ${ message.content }
+                  ${ message.content }<br>
                   ${ MessageImage }
                   </div>
                 </div>`;

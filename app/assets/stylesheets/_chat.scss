@@ -34,15 +34,16 @@
           // float: left;
         }
         .sent-naiyo{
+          display: block;
           background-color: #FAFAFA;
           font-size: 14px;
           color: #434A54;
-          clear: right;
+          // clear: right;
           // padding-top: 32px;
-          padding-left: 40px;
+          margin-left: 40px;
         }
         .sent-image{
-          margin-left: 36px;
+          margin-left: 40px;
           display: block;
           // clear: both;
         }
