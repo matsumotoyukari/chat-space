@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(function() {
   function buildHTML(message){
     var MessageImage = (message.image) ? `<img src="${message.image}">` : ``
     var html = `<div class="message" id=${ message.id }>
@@ -38,7 +38,6 @@ $(document).on('turbolinks:load', function() {
       .done(function(data) {
         data.forEach(function(data){
           var html = buildHTML(data);
-          console.log(html)
           $('.chat').append(html);
           var height = $('.test').innerHeight()
           $('.chat').animate({scrollTop: $('.chat')[0].scrollHeight}, 'fast');
