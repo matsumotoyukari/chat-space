@@ -48,8 +48,8 @@ function buildHTML(user) {
   }
 
   $(document).on('click', '.chat-group-user__btn--add', function() {
-    var id = $(this).data('userId');
-    var name = $(this).data('userName');
+    var id = $(this).data('user-id');
+    var name = $(this).data('user-name');
     var newHTML = makeHTML(id, name);
     $('#chat-group-users').append(newHTML);
     $(this).parent('.chat-group-user').remove();
